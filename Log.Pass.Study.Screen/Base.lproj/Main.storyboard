@@ -17,49 +17,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-Hr-jRw">
-                                <rect key="frame" x="139" y="269" width="42" height="30"/>
-                                <state key="normal" title="Log In"/>
-                                <connections>
-                                    <action selector="declareMessage:" destination="nS2-01-nnh" eventType="touchUpInside" id="85R-0I-yXK"/>
-                                    <segue destination="3Vf-fR-VUg" kind="show" id="vsJ-QH-dS5"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iLo-KS-Zr5">
-                                <rect key="frame" x="65" y="124" width="144" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IPV-CJ-gJX">
-                                <rect key="frame" x="65" y="183" width="144" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38M-C4-ABc">
-                                <rect key="frame" x="52" y="428" width="82" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Forgot Pass"/>
-                                <connections>
-                                    <segue destination="3Vf-fR-VUg" kind="show" id="wAr-CF-ohS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C70-w3-XoI">
-                                <rect key="frame" x="179" y="428" width="90" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Forgot Name"/>
-                                <connections>
-                                    <segue destination="3Vf-fR-VUg" kind="show" id="i75-3W-xIw"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Bxu-Ku-w21">
+                                <rect key="frame" x="51.5" y="201.5" width="217" height="165"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iLo-KS-Zr5">
+                                        <rect key="frame" x="62" y="0.0" width="93" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="IPV-CJ-gJX">
+                                        <rect key="frame" x="67" y="45" width="83.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xwd-Hr-jRw">
+                                        <rect key="frame" x="87.5" y="90" width="42" height="30"/>
+                                        <state key="normal" title="Log In"/>
+                                        <connections>
+                                            <action selector="declareMessage:" destination="nS2-01-nnh" eventType="touchUpInside" id="85R-0I-yXK"/>
+                                            <segue destination="3Vf-fR-VUg" kind="show" identifier="mainLog" id="vsJ-QH-dS5"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="HJr-AK-r9L">
+                                        <rect key="frame" x="0.0" y="135" width="217" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38M-C4-ABc">
+                                                <rect key="frame" x="0.0" y="0.0" width="82" height="30"/>
+                                                <state key="normal" title="Forgot Pass"/>
+                                                <connections>
+                                                    <segue destination="3Vf-fR-VUg" kind="show" identifier="forgPass" id="wAr-CF-ohS"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C70-w3-XoI">
+                                                <rect key="frame" x="127" y="0.0" width="90" height="30"/>
+                                                <state key="normal" title="Forgot Name"/>
+                                                <connections>
+                                                    <segue destination="3Vf-fR-VUg" kind="show" identifier="forgName" id="i75-3W-xIw"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Xwd-Hr-jRw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YSr-k3-7Sh"/>
-                            <constraint firstItem="Xwd-Hr-jRw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uZ5-C7-u9f"/>
+                            <constraint firstItem="Bxu-Ku-w21" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JZO-cg-Kv2"/>
+                            <constraint firstItem="Bxu-Ku-w21" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hro-Iq-tei"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -82,9 +88,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjQ-ov-X74">
-                                <rect key="frame" x="71" y="274" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjQ-ov-X74">
+                                <rect key="frame" x="160" y="284" width="0.0" height="0.0"/>
                                 <color key="backgroundColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -92,6 +97,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.85650097150000004" green="0.30907330779999997" blue="0.2044137141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qjQ-ov-X74" firstAttribute="centerX" secondItem="QlG-tg-4Ph" secondAttribute="centerX" id="61z-yF-bWa"/>
+                            <constraint firstItem="qjQ-ov-X74" firstAttribute="centerY" secondItem="QlG-tg-4Ph" secondAttribute="centerY" id="bWA-ts-4NI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="C48-ep-KZm"/>
                     </view>
                     <connections>
@@ -122,6 +131,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="wAr-CF-ohS"/>
+        <segue reference="vsJ-QH-dS5"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,20 +8,34 @@
 
 import UIKit
 
-var answer = String()
-
 class TitleViewController: UIViewController {
 
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard name.text != nil else { return answer = "Enter your name" }
-        guard password.text != nil else { return answer = "Enter your password" }
-        answer = "you are welcome"
+        var answer = String()
+        if segue.identifier == "mainLog" {
+//            guard let _ = name.text else {
+//                answer = "You forgot enter your name"
+//                return
+//            }
+//            guard let _ = password.text else {
+//                answer = "You forgot enter password"
+//                return
+//            }
+//            answer = "you are welcome"
+            if (name.text?.isEmpty)! {
+                answer = "You forgot enter your name"
+            } else if (password.text?.isEmpty)! {
+                answer = "You forgot enter password"
+            } else {
+                answer = "you are welcome"
+            }
+            
+        } else if segue.identifier == "forgName" {
+            answer = "enter your name"
+        } else if segue.identifier == "forgPass" {
+            answer = "enter your password"
+        }
+       segue.destination.navigationItem.title = answer
     }
     
     @IBOutlet weak var name: UITextField!

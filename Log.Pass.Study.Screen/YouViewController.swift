@@ -10,8 +10,7 @@ import UIKit
 
 class YouViewController: UIViewController {
 
-    @IBOutlet weak var letsGo: UILabel!
-    
+    @IBOutlet weak var letsGo: UILabel! // рудимент - хотел добавить лейбл в котором высвечиваются сообщения, но не смог ;(
     
 }
 
