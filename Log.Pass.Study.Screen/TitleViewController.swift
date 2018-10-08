@@ -13,11 +13,11 @@ class TitleViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         var answer = String()
         if segue.identifier == "mainLog" {
-//            guard let _ = name.text else {
+//            guard !(name.text?.isEmpty)! else {
 //                answer = "You forgot enter your name"
 //                return
 //            }
-//            guard let _ = password.text else {
+//            guard !(password.text?.isEmpty)! else {
 //                answer = "You forgot enter password"
 //                return
 //            }
